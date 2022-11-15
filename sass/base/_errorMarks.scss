@@ -1,0 +1,14 @@
+.correctInput {
+    background-color: var(--teal-blue);
+    color: var(--snow);
+}
+
+.incorrectInput {
+    background-color: var(--winter-sky);
+    color: var(--snow);
+}
+
+.form-name__error, .form-mark__error, .form-category__error, .form-price__error, .form-minimum-age__error, .form-maximum-age__error, .form-stock__error, .form-short-description__error, .form-long-description__error,
+.form-upload-image__error {
+    color: red;
+}

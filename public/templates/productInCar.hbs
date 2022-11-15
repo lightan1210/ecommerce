@@ -1,0 +1,17 @@
+<div data-id="{{_id}}" class="info-element">
+    <div title="Quitar juguete del carrito" class="info-element__remove">X</div>
+    <div class="info-element__image">
+        {{!-- <img src="../img/products/product-{{photo3}}" alt="MAL"> --}}
+        <img src="{{photo}}" alt="without an image">
+    </div>
+    <div class="info-element__unit-price">
+        <p>$<span id="unit-price">{{price}}</span></p>
+    </div>
+    <div class="info-element__amount">
+        <label for="item-amount" title="Elija la cantidad de items que desea de este elemento">Amount</label>
+        <input type="number" id="item-amount" name="amount-input" value="1" min="1">
+    </div>
+    <div class="info-element__final-price">
+        <p>$<span id="final-price">{{price}}</span></p>
+    </div>
+</div>

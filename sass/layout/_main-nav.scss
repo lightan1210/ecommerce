@@ -1,0 +1,45 @@
+
+.main-nav {
+    
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        
+        @media (min-width: 768px) {
+            flex-direction: row;
+        }
+    }
+    
+    &__item {
+        text-align: center;
+    }
+    
+    &__link {
+        display: block;
+        padding: 1em 0.7em;
+        color: var(--teal-blue);
+        font-size: 1.2em;
+        font-weight: bold;
+        text-decoration: none;
+        transition: color .2s;
+        
+        &--active {
+            color: var(--ua-red);
+        }
+        
+        &:hover,
+        &:focus {
+            color: var(--ua-red);
+        }
+
+        
+        @media (min-width: 1024px) {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+    }
+}

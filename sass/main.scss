@@ -1,0 +1,253 @@
+// abstracts
+
+// vendors
+
+// base
+@use 'base/colors';
+@use 'base/colors2';
+@use 'base/errorMarks';
+@use 'base/mainStructure';
+@use 'base/normalize';
+@use 'base/reset';
+@use 'base/utilities';
+
+// layout
+@use 'layout/footer';
+@use 'layout/hamburger-button';
+@use 'layout/main-header';
+@use 'layout/main-nav';
+@use 'layout/main-nav-toggle';
+
+// components
+@use 'components/cart-modal';
+@use 'components/card';
+@use 'components/news';
+
+// pages
+@use 'pages/alta';
+@use 'pages/contacto';
+@use 'pages/index';
+@use 'pages/nosotros';
+
+// themes
+
+// *,
+// *::after,
+// *::before {
+//     box-sizing: inherit;
+// }
+
+// body {
+//     box-sizing: border-box;
+// }
+
+// .u-text-align-left {
+//     text-align-last: left!important; //no usar !important
+// }
+
+// .u-text-align-right {
+//     text-align-last: right!important; //no usar !important
+// }
+
+// .u-text-align-center {
+//     text-align-last: center!important; //no usar !important
+// }
+
+// .u-text-align-justify {
+//     text-align-last: justify!important; //no usar !important
+// }
+
+
+
+
+
+
+
+
+// .main-header {
+//     /* border: 4px solid red; */
+//     display: flex;
+//     flex-wrap: wrap;
+// }
+
+// .main-header__logo-container {
+//     background-color: #944;
+//     padding: 1em;
+//     flex-basis: 5em;
+// }
+
+// .main-header__search-form-container {
+//     background-color: #494;
+//     padding: 1em;
+//     flex-grow: 1;
+// }
+
+// .main-header__cart-button-container {
+//     background-color: #444;
+//     padding: 1em;
+// }
+
+// .main-header__hamburger-button-container {
+//     background-color: #47b;
+//     padding: 1em;
+// }
+
+// .hamburger-button {
+//     display: block;
+//     cursor: pointer;
+//     width: 2em;
+//     height: 2em;
+//     background-color: #222;
+//     position: relative;
+//     border-radius: .2em;
+// }
+
+// .hamburger-button:hover {
+//     background-color: #2a2a2a;
+// }
+
+// .hamburger-button__top-bread {
+//     display: block;
+//     position: absolute;
+//     width: 80%;
+//     height: 10%;
+//     top: 20%;
+//     left: 10%;
+//     background-color: #eee;
+// }
+
+// .hamburger-button__meat {
+//     position: absolute;
+//     left: 10%;
+//     top: 50%;
+//     display: block;
+//     width: 80%;
+//     height: 10%;
+//     transform: translateY(-50%);
+//     background-color: #eee;
+// }
+
+// .hamburger-button__bottom-bread {
+//     position: absolute;
+//     left: 10%;
+//     bottom: 20%;
+//     display: block;
+//     width: 80%;
+//     height: 10%;
+//     background-color: #eee;
+// }
+
+
+
+// .main-header__main-nav-container {
+//     background-color: yellow;
+//     flex-basis: 100%;
+//     display: none;
+//     flex-grow: 1;
+// }
+
+// .main-nav {
+//     background-color: #22262a;
+// }
+
+// .main-nav__list {
+//     margin: 0;
+//     padding: 0;
+//     background-color: pink;
+//     list-style-type: none;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-start;
+// }
+
+// .main-nav__item {
+//     /* width: 100% */
+//     /* background-color: cyan; */
+//     text-align: center;
+// }
+
+// .main-nav__link {
+//     display: block;
+//     width: 100%;
+//     background-color: orange;
+//     padding: 1em .7em;
+//     color: #222;
+//     font-size: 1.2em;
+//     text-decoration: none;
+// }
+
+// .main-nav__link:hover,
+// .main-nav__link:focus {
+//     background-color: orangered;
+//     outline: none;
+// }
+
+
+
+// .main-nav-toggle {
+//     display: none;
+// }
+
+// .main-nav-toggle:checked ~ .main-header .main-header__main-nav-container {
+//     display: block;
+// }
+
+// @media (min-width: 1024px) {
+//     .main-header__logo-container {
+//         flex-basis: 10em;
+//     }
+
+//     .main-nav__link {
+//         padding-left: 1em;
+//         padding-right: 1em;
+//     }
+
+// }
+
+// @media (min-width: 768px) {
+//     .main-header__logo-container {
+
+//     }
+
+//     .main-header__search-form-container {
+//         order: 2;
+//         flex-basis: 15em;
+//         flex-grow: 0;
+//         flex-shrink: 1;
+//     }
+
+//     .main-header__cart-button-container {
+//         order: 3;
+//     }
+
+//     .main-header__hamburger-button-container {
+//         display: none;
+//     }
+
+//     .main-header__main-nav-container {
+//         flex-basis: auto;
+//         flex-grow: 1;
+//         order: 1;
+//         display: block;
+//     }
+
+//     .main-nav__list {
+//         flex-direction: row;
+//     }
+// }
+
+
+
+
+
+
+
+
+
+// .cards-container {
+//     padding: 1em;
+//     display: flex;
+//     flex-wrap: wrap;
+//     gap: 1em;
+//     justify-content: center;
+// }

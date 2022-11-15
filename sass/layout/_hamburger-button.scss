@@ -1,0 +1,88 @@
+.hamburger-button {
+    background-color: white;
+    border-radius: 0.8em;
+    cursor: pointer;
+    display: block;
+    height: 2em;
+    margin: auto;
+    position: relative;
+    width: 2em;
+    
+    // &:hover  &__top-bread, &:focus  &__top-bread {
+    //   transition: .2s;
+    //   top: 42%;
+    //   top: 10%;
+    //   // transform: rotate(-45deg);
+    // }
+    
+    // &:hover &__meat, &:focus &__meat {
+    //   // transition: .2s;
+    //   visibility: hidden;
+    // }
+    
+    // &:hover &__bottom-bread, &:focus &__bottom-bread {
+    //   // transform: rotate(45deg);
+    //   bottom: 42%;
+    //   bottom: 10%;
+    //   transition: .2s;
+    // }
+    
+    &__top-bread {
+      background-color: #DF8236;
+      border-top-left-radius: 100vmax;
+      border-top-right-radius: 100vmax;
+      display: block;
+      height: 15%;
+      left: 10%;
+      position: absolute;
+      top: 20%;
+      transition: .2s;
+      width: 80%;
+    }
+    
+    &__meat {
+      border-radius: 100vmax;
+      position: absolute;
+      left: 10%;
+      top: 50%;
+      display: block;
+      width: 80%;
+      height: 10%;
+      transform:translateY(-50%);
+      background-color: #945C35;
+      visibility: visible;
+    }
+    
+    &__bottom-bread {
+      background-color: #DF8236;
+      border-bottom-left-radius: 100vmax;
+      border-bottom-right-radius: 100vmax;
+      bottom: 20%;
+      display: block;
+      height: 15%;
+      left: 10%;
+      position: absolute;
+      transition: .2s;
+      width: 80%;
+    }
+        
+    &__top-bread--active{
+      top: 42%;
+      transition: .2s;
+      // top: 10%;
+      transform: rotate(-45deg);
+    }
+    
+    &__meat--active {
+      // transition: .2s;
+      visibility: hidden;
+    }
+    
+    &__bottom-bread--active {
+      transform: rotate(45deg);
+      bottom: 42%;
+      // bottom: 10%;
+      transition: .2s;
+    }
+  }
+  

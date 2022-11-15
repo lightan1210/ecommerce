@@ -1,0 +1,124 @@
+.cart-modal-container {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    margin: auto;
+    inset: 0;
+    // transform: scale(0);
+    // transform-origin: 90% 10%;
+    // transition: transform .3s;
+    
+    &--active {
+        // transform: scale(1);
+        background-color: rgba(0,0,0,0.5);
+        display: block;
+    }
+}
+
+.cart-info {
+    // background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: min(1280px, 85vw);
+    width: clamp(350px,1280px, 85vw);
+    position: absolute;
+    margin: auto;
+    inset: 0;
+    
+    &__close {
+        align-self: flex-end;
+        background-color: var(--snow);
+        border-radius: 100vmax;
+        user-select: none;
+        margin: 10px;
+        padding: 10px;
+        cursor: pointer;
+        // position: absolute;
+        // right: 15px;
+        // top: 15px;
+    }
+    &__list {
+
+        background-color: var(--snow);
+        opacity: 95%;
+        border-radius: 8px;
+        border: 2px solid var(--ua-red);
+        // margin-top: 40px;
+        height: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    &__total {
+        background-color: var(--snow);
+        border: 2px solid var(--ua-red);
+        border-radius: 100vmax;
+        bottom: -80px;
+        right: 0%;
+        font-size: 1.4em;
+        padding: 10px;
+        position: absolute;
+        width: fit-content;
+
+        span {
+            color: var(--ua-red);
+        }
+    }
+    &__pay-all {
+        background-color: var(--snow);
+        border: 2px solid var(--ua-red);
+        border-radius: 100vmax;
+        bottom: -80px;
+        cursor: pointer;
+        left: 0%;
+        font-size: 1.4em;
+        padding: 10px;
+        position: absolute;
+        user-select: none;
+        width: fit-content;
+    }
+}
+
+.info-element {
+    border-radius: 10px;
+    background-color: var(--teal-blue);
+    margin: 10px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+
+    &__image {
+        // border: 1px solid red;
+        display: inline-block;
+        max-width: 150px;
+        max-height: 150px;
+        overflow: hidden;
+
+        & img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &__description {
+        width: 200px;
+    }
+
+    &__amount input{
+        width: 50px;
+    }
+
+    &__remove {
+        background-color: #fff;
+        border-radius: 100vmax;
+        cursor: pointer;
+        padding: 5px;
+        position: absolute;
+        top: 10px;
+        user-select: none;
+        right: 10px;
+    }
+}

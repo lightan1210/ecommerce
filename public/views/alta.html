@@ -1,0 +1,86 @@
+<header class="section-new-product__header">
+    <h1>Alta de producto</h1>
+    <p>Complete el siguiente formulario para dar de alta un nuevo juguete para su venta</p>
+</header>
+<div class="form-new-product-container">
+    <form action="#" method="get">
+        <div class="form-name">
+            <label for="form-name__input" class="form-name__label">Nombre:</label>
+            <input type="text" name="name" class="form-name__input" id="form-name__input" autofocus>
+            <p class="form-name__error" id="form-name__error"></p>
+        </div>
+        <div class="form-mark">
+            <label for="form-mark__input" class="form-mark__label">Marca:</label>
+            <input type="text" name="mark" class="form-mark__input" id="form-mark__input">
+            <p class="form-mark__error" id="form-mark__error"></p>
+        </div>
+        <div class="form-category">
+            <label for="form-category__input" class="form-category__label">Categoría:</label>
+            <!-- <input type="text" name="category" class="form-category__input"> -->
+            <input type="text" name="category" class="form-category__input" id="form-category__input">
+            <!-- <select name="category" class="form-category__input" id="form-category__input">
+                <option value="">- Seleccionar -</option>
+                <option value="mesa">Mesa</option>
+                <option value="munecos">Muñecos de acción</option>
+                <option value="peluches">Peluches</option>
+            </select> -->
+            <p class="form-category__error" id="form-category__error"></p>
+        </div>
+        <div class="form-price">
+            <label for="form-price__input" class="form-price__label">Precio:</label>
+            <input type="number" step="0.00000001" name="price" class="form-price__input" id="form-price__input">
+            <p class="form-price__error" id="form-price__error"></p>
+        </div>
+        <div class="form-minimum-age">
+            <label for="form-minimum-age__input" class="form-minimum-age__label">Edad Mín.:</label>
+            <input type="number" name="minimum-age" class="form-minimum-age__input" id="form-minimum-age__input">
+            <select name="monthOrYear" class="form-ageType__input">
+                <option value="m">meses</option>
+                <option value="y">años</option>
+            </select>
+            <p class="form-minimum-age__error" id="form-minimum-age__error"></p>
+        </div>
+        <div class="form-maximum-age">
+            <label for="form-maximum-age__input" class="form-maximum-age__label">Edad Máx.:</label>
+            <input type="number" name="maximum-age" class="form-maximum-age__input" id="form-maximum-age__input">
+            <select name="monthOrYear" class="form-ageType__input">
+                <option value="m">meses</option>
+                <option value="y">años</option>
+            </select>
+            <p class="form-maximum-age__error" id="form-maximum-age__error"></p>
+        </div>
+        <div class="form-stock">
+            <label for="form-stock__input" class="form-stock__label">Stock:</label>
+            <input type="number" name="stock" class="form-stock__input" id="form-stock__input">
+            <p class="form-stock__error" id="form-stock__error"></p>
+        </div>
+        <div class="form-short-description">
+            <label for="form-short-description__input" class="form-short-description__label">Descripción breve:</label>
+            <textarea class="form-short-description__input" id="form-short-description__input" name="short-description"></textarea>
+            <p class="form-short-description__error" id="form-short-description__error"></p>
+            <!-- <input type="" name="short-description" class="form-short-description__input"> -->
+        </div>
+        <div class="form-long-description">
+            <label for="form-long-description__input" class="form-long-description__label">Descripción:</label>
+            <textarea class="form-long-description__input" id="form-long-description__input" name="long-description"></textarea>
+            <p class="form-long-description__error" id="form-long-description__error"></p>
+            <!-- <input type="text" name="long-description" class="form-long-description__input"> -->
+        </div>
+        <div class="form-free-send">
+            <label for="form-free-send__input" class="form-free-send__label">Envío gratis </label>
+            <input type="checkbox" name="free-send" class="form-free-send__input" id="form-free-send__input">
+        </div>
+        <div class="form-upload-image">
+            <label for="my-file" class="form-upload-image__label">Foto del juguete:</label>
+            <input type="text" id="my-file" name="filename">
+            <p class="form-upload-image__error" id="form-upload-image__error"></p>
+            <!-- <div class="form-upload-image__preview-image-container form-upload-image__preview-image-container--hidden" id="form-upload-image__preview-image-container">
+                <img src="" alt="preview-image">
+            </div> -->
+            <!-- <input type="text" name="long-description" class="form-upload-image__input"> -->
+        </div>
+        <div class="form-submit-button">
+            <input type="submit" value="Enviar">
+        </div>
+    </form>
+</div>

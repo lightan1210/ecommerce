@@ -1,0 +1,22 @@
+<div title="Ver detalles del juguete" class="card {{#if freeSend}}card--free-send{{/if}} {{#if discount}}card--discount{{/if}}">
+    <article class="card__article">
+        <div class="card__image-container">
+            {{!-- <img src="img/products/product-{{photo}}" alt="{{photo}}" class="card__image"> --}}
+            <img src="{{photo}}" alt="{{photo}}" class="card__image">
+        </div>
+        <div class="card__content">
+            <h2 class="card__heading">{{productName}}</h2>
+            <p class="card__description">
+                {{shortDescription}}
+            </p>
+            <p class="card__price">
+                $<span>{{price}}</span>
+            </p>
+            <div title="" class="card__add-cart" data-id="{{_id}}">
+                Agregar al carrito
+            </div>
+        </div>
+    </article>
+    <div class="card__free-send">Envío Gratis</div>
+    <div class="card__discount">Rebaja</div>
+</div>

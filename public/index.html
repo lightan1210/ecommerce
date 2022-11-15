@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/logo.png">
+    <!-- <link rel="stylesheet" href="css/card.css"> -->
+</head>
+<body>
+    <input type="checkbox" class="main-nav-toggle" id="main-nav-toggle">
+    <header class="main-header">
+        <div class="main-header__logo-container">
+            <a title="Página de inicio" href="#/inicio"><img src="img/logo4.gif" alt="gif logo"></a>
+            <p>Cósmica</p>
+            <p>Juguetería</p>
+        </div>
+        <div class="main-header__search-form-container">
+            <label class="main-header__search-label" for="main-header__search-input">Juguete:</label>
+            <input name="search-input" type="text" class="main-header__search-input" id="main-header__search-input">
+            <a title="Buscar en nuestro catálogo" class="main-header__search-button" href="#"><img src="img/buscar.png" alt="search button"></a>
+        </div>
+        <div title="Ver/Ocultar compras" class="main-header__cart-button-container">
+            <img src="img/empty-cart.png" alt="cart icon">
+        </div>
+        <div class="main-header__hamburger-button-container">
+            <label for="main-nav-toggle" class="hamburger-button" title="Expandir barra de navegación">
+                <span class="hamburger-button__top-bread"></span>
+                <span class="hamburger-button__meat"></span>
+                <span class="hamburger-button__bottom-bread"></span>
+            </label>
+        </div>
+        <div class="main-header__main-nav-container">
+            <nav class="main-nav">
+                <ul class="main-nav__list">
+                    <li title="Página principal" class="main-nav__item">
+                        <a href="#/inicio" class="main-nav__link">Inicio</a>
+                    </li>
+                    <li title="Dar de alta un nuevo producto" class="main-nav__item">
+                        <a href="#/alta" class="main-nav__link">Alta</a>
+                    </li>
+                    <li title="Contáctese con nosotros" class="main-nav__item">
+                        <a href="#/contacto" class="main-nav__link">Contacto</a>
+                    </li>
+                    <li title="Acerca de..." class="main-nav__item">
+                        <a href="#/nosotros" class="main-nav__link">Nosotros</a>
+                    </li>
+                    <!-- <li class="main-nav__item">
+                        <div class="color1"></div>
+                        <div class="color2"></div>
+                        <div class="color3"></div>
+                        <div class="color4"></div>
+                        <div class="color5"></div>
+                    </li> -->
+                </ul>
+            </nav>
+        </div>
+        <div class="cart-modal-container">
+            <div class="cart-info">
+                <div title="Ocultar compras" class="cart-info__close">
+                    X
+                </div>
+                <div class="cart-info__list">
+                    <!-- <div class="info-element">
+                        <div class="info-element__remove">X</div>
+                        <div class="info-element__image">
+                            <img src="img/logo-it.jpg" alt="IT logo">
+                        </div>
+                        <div class="info-element__unit-price">
+                            <p>$<span id="unit-price">1210.93</span></p>
+                        </div>
+                        <div class="info-element__amount">
+                            <label for="item-amount" title="Elija la cantidad de items que desea de este elemento">Amount</label>
+                            <input type="number" id="item-amount" name="amount-input" value="1" min="1">
+                        </div>
+                        <div class="info-element__final-price">
+                            <p>$<span id="final-price">1210,93</span></p>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="cart-info__total">Total $ <span>0</span></div>
+                <div class="cart-info__pay-all">Pagar todo</div>
+            </div>
+        </div>
+    </header>
+    <main>
+    </main>
+    <footer class="main-footer">
+        <div class="main-footer__container">
+            <div class="main-footer__logo">
+                <img src="img/logo.png" alt="logo">
+            </div>
+            <div class="main-footer__direction">
+                <h2>Direccion</h2>
+                <p>Calle falsa 123</p>
+            </div>
+            <div class="main-footer__contact">
+                <h2>Teléfono</h2>
+                <p>555-0123</p>
+            </div>
+            <div class="main-footer__social-media">
+                <h2>Síguenos</h2>
+                <div>
+                    <a href="#"><img src="img/facebook-icon.png" alt="facebook icon"></a>
+                    <a href="#"><img src="img/twitter-icon.png" alt="twitter icon"></a>
+                    <a href="#"><img src="img/instagram-icon.png" alt="instagram icon"></a>
+                    <a href="#"><img src="img/youtube-icon.png" alt="youtube icon"></a>
+                </div>
+            </div>
+            <div class="main-footer__copyright">
+                <img src="img/copyright2.png" alt="copyright icon">
+                <span>Copyright 2022 por Norberto Jorge Larrosa</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script> -->
+    <script src="js/vendor/handlebars.min-v4.7.7.js"></script>
+    <script src="js/burger-button.js"></script>
+    <script src="js/verificacion-alta.js"></script>
+    <script src="js/verificacion-contacto.js"></script>
+    <script src="js/main.js" type="module"></script>
+
+</body>
+</html>

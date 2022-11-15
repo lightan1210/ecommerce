@@ -1,0 +1,23 @@
+@font-face {
+    font-family: Roboto;
+    src: url("../../css/fonts/Roboto/Roboto-Light.ttf");
+}
+
+@font-face {
+    font-family: Proxima Nova;
+    src: url("../../css/fonts/Proxima-Nova-Font/Proxima\ Nova\ Font.otf");
+}
+
+body {
+    // background: var(--citrine);
+    background: var(--snow);
+    min-width: 365px;
+}
+
+main {
+    max-width: 1280px;
+    // font-family: Proxima Nova,'Times New Roman', Times, serif;
+    font-family: Proxima Nova,'Times New Roman', Times, serif;
+    margin: auto;
+    padding: 10px;
+}

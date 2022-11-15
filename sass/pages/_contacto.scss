@@ -1,0 +1,78 @@
+.section-new-product {
+
+    &__header {
+        & h1 {
+            // color: var(--amber);
+            font-variant: small-caps;
+            text-decoration: underline;
+        }
+    }
+
+    &__form-contact-container{
+        
+        & form {
+            border-radius: 10px;
+            // background: var(--azure);
+            // color: white;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 1em;
+            margin: auto;
+            padding: 20px;
+
+            & input {
+                border-radius: 7px;
+            }
+
+            & .form-name__input {
+                max-width: 400px;
+                padding: 5px;
+            }
+
+            & .form-name__error {
+                display: block;
+                height: 15px;
+            }
+
+            & .form-email__input {
+                max-width: 400px;
+                padding: 5px;
+            }
+
+            & .form-email__error {
+                display: block;
+                height: 15px;
+            }
+    
+            & > div {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                // width: 300px;
+            }
+            
+            & input[type="submit"] {
+                width: fit-content;
+                margin: auto;
+                padding: 5px;
+            }
+
+        }
+    }
+}
+
+
+
+.form-message {
+    flex-direction: column;
+    gap: 1em;
+
+    &__input {
+        border-radius: 8px;
+        height: 300px;
+        padding: 10px;
+        resize: none;
+        width: 100%;
+    }
+}

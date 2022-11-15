@@ -1,0 +1,19 @@
+.section-about-us {
+    // font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 15px;
+
+    &__header {
+        // color: var(--amber);
+        font-variant: small-caps;
+        text-decoration: underline;
+    }
+}
+
+.image-motivation {
+    text-align: center;
+    
+    &__image {
+        display: inline-block;
+        width: min(360px, 100%);
+    }
+}

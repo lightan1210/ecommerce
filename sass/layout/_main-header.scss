@@ -1,0 +1,153 @@
+.hidden-scroll-page {
+    overflow: hidden;
+}
+
+.main-header {
+    align-items: center;
+    background-image: url("../../img/juguetes.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    
+    background-color: var(--citrine);
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: space-evenly;
+    margin: auto;
+    min-width: 360px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+
+    &__search {
+
+        &-form-container {
+            // flex-grow: 1;
+            position: relative;
+            z-index: -1;
+            
+            @media (min-width: 768px) {
+                flex-basis: 15em;
+                flex-grow: 0;
+                flex-shrink: 1;
+                order: 2;
+            }
+        }
+
+        &-input {
+            background-color: var(--snow);
+            border: none;
+            border-radius: 100vmax;
+            box-shadow: 0 0 10px var(--snow);
+            display: inline-block;
+            margin:0 auto;
+            outline: none;
+            padding: 3px 30px 3px 15px;
+            z-index: -1;
+            
+            @media (min-width: 491px) {
+                width: 100%;
+            }
+            
+            @media (min-width: 768px) {
+                // width: auto;
+            }
+        }
+
+        &-button {
+            position: absolute;
+            right: 5px;
+            top: 32px;
+            // width: 20%;
+            
+            // @media (min-width: 491px) {
+            //     bottom: 0px;
+            //     left: auto;
+            //     position: absolute;
+            //     right: 10px;
+            //     top: auto;
+            //     width: auto;
+            // }
+            
+            // @media (min-width: 768px) {
+            //     right: 30px;
+            // }
+        }
+        
+        &-label {
+            display: block;
+            font-size: 1.2em;
+            margin-left: 20px;
+            margin-bottom: 5px;
+        }
+    }        
+        
+    &__logo-container {
+        align-self: center;
+        flex-basis: 5em;
+        margin: 10px;
+        text-align: center;
+
+        & img {
+            margin: 0;
+            width: 80px;
+        }
+
+        & p {
+            font-variant: small-caps;
+            font-size: 1.2em;
+            line-height: .8em;
+            margin: 0 5px;
+        }
+        
+        @media (min-width: 1024px) {
+            flex-basis: 10em;
+        }
+    }
+    
+    &__cart-button-container {
+        cursor: pointer;
+        // padding: 1em;
+        position: relative;
+
+        & img {
+            width: 48px;
+        }
+
+        &--active {
+            background-color: var(--snow);
+            border-radius: 100vmax;
+            padding: 10px;
+            position: absolute;
+            top: 50px;
+            z-index: 1;
+        }
+
+        @media (min-width: 768px) {
+            order: 3;
+        }
+    }
+    
+    &__hamburger-button-container {
+        padding: .5em;
+        flex-basis: 100%;
+
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__main-nav-container {
+        align-self: center;
+        display: none;
+        flex-basis: 100%;
+
+        @media (min-width: 768px) {
+            display: block;
+            flex-basis: auto;
+            order: 1;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.main-footer {
+    background-color: var(--citrine);
+    background-image: url("../../img/juguetes.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    // font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
+    width: 100%;
+    
+    &__container {
+        column-gap: 1em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: auto;
+        max-width: 1280px;
+        row-gap: .8em;
+    }
+    
+    p {
+        color: var(--ua-red);
+        font-size: 1em;
+        margin: 0;
+        text-indent: 10px;
+    }
+
+    &__logo img{
+        width: 100px;
+    }
+    
+    &__copyright {
+        color: var(--ua-red);
+        flex-basis: 100%;
+    }
+    
+    &__copyright img{
+        width: 25px;
+    }
+
+    &__social-media {
+        flex-basis: 100%;
+        & a {
+            display: inline-block;
+            height: 48px;
+            width: 48px;
+        }
+        
+        @media (min-width: 768px) {
+            
+            display: flex;
+            flex-basis: auto;
+            flex-direction: column;
+            
+            // flex-grow: 1;
+            gap: 1em;
+        }
+    }
+
+}
