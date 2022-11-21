@@ -25,6 +25,6 @@ app.post('/', (req, res) => {
     if(!output)
         return res.status(400).send({status: 'failed'});
     
-    //NO MUESTRA ELEMENTOS EN FORMATO JSON
     console.log(output);
+    return res.status(200).send({status: 'success'});
 })

@@ -1,10 +1,11 @@
 .card {
     background-color: var(--teal-blue);
     border-radius: 3px 3px 0 0;
-    box-shadow: 
-        0 1px 5px var(--teal-blue),
-        0 0 3px var(--teal-blue)
-    ;
+    // box-shadow: 
+    //     0 1px 5px var(--teal-blue),
+    //     0 0 3px var(--teal-blue)
+    // ;
+    box-shadow: 0 0 3px var(--black-olive);
     color: var(--snow);
     filter: blur(.01em);
     flex-grow: 1;
@@ -57,7 +58,7 @@
         transition: opacity .5s;
         
         @media (min-width: 768px) {
-            font-size: 1em;
+            font-size: .9em;
             left: 0px;
             top: 20px;
             bottom: auto;
@@ -84,7 +85,7 @@
             border-bottom-right-radius: 0vmax;
             border-top-left-radius: 100vmax;
             border-bottom-left-radius: 100vmax;
-            font-size: 1em;
+            font-size: .9em;
             top: 20px;
             right: 0px;
             left: auto;
@@ -107,14 +108,21 @@
     &:hover {
         animation: boxShadowColorChange .65s forwards alternate-reverse infinite;
         background-color: var(--cyan-process);
-        box-shadow: 
-        0 1px 15px 3px var(--cyan-process),
-        0 0 3px var(--cyan-process)
-        ;
+        // box-shadow: 
+        // 0 1px 15px 3px var(--cyan-process),
+        // 0 0 3px var(--cyan-process)
+        // ;
+        box-shadow: 0 0 15px var(--black-olive);
         color: var(--black-olive);
-        cursor: pointer;
+        // cursor: pointer;
         transform: scale(1.04);
         transform-origin: bottom;
+        
+        & .card__image-container {
+            border-radius: 0;
+            box-shadow: none;
+            transition: .25s;
+        }
     }
 
     &__description {
@@ -133,10 +141,13 @@
     }
 
     &__image-container {
+        border-radius: 100vmax;
+        box-shadow: 0 0 8px var(--black-olive);
         display: block;
-        outline: 1px solid var(--black-olive);
-        width: 50%;
+        // outline: 1px solid var(--black-olive);
         max-height: 280px;
+        overflow: hidden;
+        width: 50%;
 
         @media (min-width: 768px) {
             width: 100%;
@@ -159,11 +170,13 @@
 
     &__add-cart {
         // background-color: var(--cyan-process);
+        cursor: pointer;
         font-size: 20px;
         margin: 10px 0;
         opacity: 70%;
         padding: 20px 0;
         text-align: center;
+        user-select: none;
 
         &:hover {
             border-radius: 6px;

@@ -2,18 +2,48 @@
     // font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 15px;
 
+    &__information {
+        & .cite {
+            text-align: center;
+        }
+
+        & .image-text {
+            align-items: center;
+            display: flex;
+            gap: 1em;
+        }
+    }
+    
+
     &__header {
         // color: var(--amber);
         font-variant: small-caps;
+        text-align: center;
         text-decoration: underline;
     }
 }
 
-.image-motivation {
-    text-align: center;
+.image-text {
+    box-shadow: 34px 0 20px var(--black-olive),-34px 0 20px var(--black-olive);
+    padding: 15px;
+    margin: 30px 0;
+
+    &__image-motivation {
+        // text-align: center;
     
-    &__image {
-        display: inline-block;
-        width: min(360px, 100%);
+        &__image {
+            display: inline-block;
+            // width: min(360px, 100%);
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    &:nth-child(even) {
+        flex-direction: row-reverse;
     }
 }

@@ -42,22 +42,32 @@ let total;
 let amount;
 
 window.addEventListener("click", async e => {
-    // NO FUNCIONA
     if(e.target.className === "cart-info__pay-all") {
         let arrayOfProducts = modalWindow.children;
+        let arrayOfProductsJSON = [];
         if(!arrayOfProducts.length){
             console.log("No hay elementos a comprar");
         }
         else {
+            for (let productToPay of arrayOfProducts) {
+                arrayOfProductsJSON.push(convertHtmlToObject(productToPay));
+            }
             const res = await fetch("/",
             {
                 method: 'POST',
                 headers: {
                     "Content-Type": 'application/json'
                 },
-                body: JSON.stringify({...arrayOfProducts})
+                body: JSON.stringify(arrayOfProductsJSON)
+            }).then(function(res) {
+                if(res.status === 200)
+                    while(arrayOfProducts.length) {
+                        arrayOfProducts[0].remove();
+                    }
+                else {
+                    console.log("Error al intentar pagar...")
+                }
             });
-            modalWindow.innerHTML = "";
         }
         return;
     }
@@ -70,10 +80,6 @@ window.addEventListener("click", async e => {
 
         if(modalElement) {
 
-            // amount = modalElement.children[3].querySelector("input");
-            // unitPrice = modalElement.children[2].querySelector("#unit-price");
-            // finalPrice = modalElement.children[4].querySelector("#final-price");
-
             amount = modalElement.querySelector("input");
             unitPrice = modalElement.querySelector("#unit-price");
             finalPrice = modalElement.querySelector("#final-price");
@@ -84,7 +90,6 @@ window.addEventListener("click", async e => {
             calculateTotal();
         }
         else {
-            console.log("Agregando producto nuevo al carrito");
             popUp = document.querySelector(".cart-button-container__popUp");
             popUp.classList.add("cart-button-container__popUp--active");
             setTimeout(() => {
@@ -114,9 +119,6 @@ window.addEventListener("click", async e => {
         amount = e.target;
         let parent = e.target.closest(".info-element");
 
-        // unitPrice = parent.children[2].querySelector("#unit-price");
-        // finalPrice = parent.children[4].querySelector("#final-price");
-
         unitPrice = parent.querySelector("#unit-price");
         finalPrice = parent.querySelector("#final-price");
         amount.setAttribute("value",amount.value);
@@ -139,9 +141,6 @@ window.addEventListener("change", e => {
         amount = e.target;
         let parent = e.target.closest(".info-element");
 
-        // unitPrice = parent.children[2].querySelector("#unit-price");
-        // finalPrice = parent.children[4].querySelector("#final-price");
-
         unitPrice = parent.querySelector("#unit-price");
         finalPrice = parent.querySelector("#final-price");
         amount.setAttribute("value",amount.value);
@@ -155,16 +154,21 @@ const calculateTotal = () => {
     total = 0;
     Array.from(modalWindow.children).forEach(element => {
         
-        // finalPrice = element.children[4].querySelector("#final-price").innerHTML;
-
         finalPrice = element.querySelector("#final-price").innerHTML;
         total += parseFloat(parseFloat(finalPrice).toFixed(2));
         total = parseFloat(total.toFixed(2));
     });
-    // totalPrice.children[0].innerHTML = total;
 
     totalPrice.innerHTML = total;
-    // console.log("TOTAL GASTADO: ", total)
+}
+
+const convertHtmlToObject = productToPay => {
+    return {
+        "product-name":productToPay.querySelector("#product-name").innerHTML,
+        "unit-price":`\$${productToPay.querySelector("#unit-price").innerHTML}`,
+        "amount": productToPay.querySelector("#item-amount").value,
+        "final-price":`\$${productToPay.querySelector("#final-price").innerHTML}`
+    };
 }
 
 // MAIN
